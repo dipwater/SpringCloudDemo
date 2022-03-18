@@ -1,0 +1,12 @@
+################ 项目基本配置 ################
+spring:
+  application:
+    # 对应注册Eureka中的服务名
+    name: eureka-service
+
+################ Eureka配置 ################
+eureka:
+  client:
+    # 防止Eureka启动时注册本身服务
+    register-with-eureka: false
+    fetch-registry: false
