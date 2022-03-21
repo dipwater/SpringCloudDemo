@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
                 echo 'Build'
                 sh 'mvn --version'
@@ -15,7 +15,7 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
-        stage('deploy') {
+        stage('Deploy') {
             steps {
                 echo 'Deploy'
                 sh './jenkins/run_dev.sh'
